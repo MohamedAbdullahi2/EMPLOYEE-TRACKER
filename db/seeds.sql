@@ -13,7 +13,7 @@ VALUES
   ('Recruiter ', 20000, 1),
   ('Marketer', 30000, 3),
   ('Software Engineer', 40000, 2),
-  ('Attorney', 200000, 7),
+  ('Lawyers', 200000, 7),
   ('Salesperson', 130000, 5),
   ('Engineer', 150000, 6),
   ('Accountant', 160000, 7),
