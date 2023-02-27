@@ -25,3 +25,44 @@ Clone the repository: ** git clone https://github.com/MohamedAbdullahi2/EMPLOYEE
 Navigate to the project directory: **cd employee-tracker
 
 Install dependencies: **npm install
+
+# Usage
+Start the application by running the command: **npm start
+
+Follow the prompts in the CLI to add, view, edit, or remove employees from the database.
+
+# Features
+
+Add a new employee to the database
+
+View all employees in the database
+
+Update an employee's information in the database
+
+Remove an employee from the database
+
+# MUCK UP 
+
+
+**Walkthrough Video         
+
+
+# Contributing
+
+Contributions are always welcome! If you would like to contribute to this project, please follow these steps:
+
+Fork this repository
+
+Create a new branch (git checkout -b feature/your-feature)
+
+Commit your changes (git commit -am 'Add some feature')
+
+Push to the branch (git push origin feature/your-feature)
+
+Create a new Pull Request
+
+
+
+
+
+
