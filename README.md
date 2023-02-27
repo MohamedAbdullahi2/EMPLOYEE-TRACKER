@@ -17,3 +17,11 @@ Inquiery
 
 Mysql2
  
+ 
+# Installation
+
+Clone the repository: ** git clone https://github.com/your-username/employee-tracker.git
+
+Navigate to the project directory: **cd employee-tracker
+
+Install dependencies: **npm install
