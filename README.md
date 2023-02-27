@@ -8,8 +8,12 @@ This is a Node.js CRUD application that allows users to track employees in a dat
 # Prerequisites
 
 Node.js
+
 MySQL Database
+
 Express.js 
+
 Inquiery 
+
 Mysql2
  
