@@ -20,7 +20,7 @@ Mysql2
  
 # Installation
 
-Clone the repository: ** git clone https://github.com/your-username/employee-tracker.git
+Clone the repository: ** git clone https://github.com/MohamedAbdullahi2/EMPLOYEE-TRACKER.git
 
 Navigate to the project directory: **cd employee-tracker
 
