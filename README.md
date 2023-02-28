@@ -24,12 +24,12 @@ console.table
 
 Clone the repository: ** git clone https://github.com/MohamedAbdullahi2/EMPLOYEE-TRACKER.git
 
-Navigate the directory: **cd employee-tracker
+Navigate the directory: **cd employee-tracker**
 
-Install dependencies: **npm install
+Install dependencies: **npm install**
 
 # Usage
-Start the application by running the command: **npm start
+Start the application by running the command: **npm start**
 
 Follow the prompts in the CLI to add, view, edit, or remove employees from the database.
 
