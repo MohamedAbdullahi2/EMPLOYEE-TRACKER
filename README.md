@@ -53,18 +53,18 @@ Remove an employee from the database
 # MUCK UP 
 
 
-**Walkthrough Video         
+**walkthrough video demonstrating the usage of the application**         
 
 
 # Contributing
 
 Contributions are always welcome! If you would like to contribute to this project, please follow these steps:
 
-Fork this repository
+**Fork** this repository
 
 Create a new branch 
 
-(git checkout -b developed)
+(git checkout -b develop)
 
 Commit your changes 
 
@@ -72,7 +72,7 @@ Commit your changes
 
 Push to the branch 
 
-(git push origin feature/your-feature)
+(git push origin develop)
 
 
 
