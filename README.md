@@ -24,7 +24,7 @@ console.table
 
 Clone the repository: ** git clone https://github.com/MohamedAbdullahi2/EMPLOYEE-TRACKER.git
 
-Navigate to the project directory: **cd employee-tracker
+Navigate the directory: **cd employee-tracker
 
 Install dependencies: **npm install
 
