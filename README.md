@@ -53,7 +53,7 @@ Remove an employee from the database
 # MUCK UP 
 
 
-**Walkthrough video demonstrating the usage of the application**         
+**Walkthrough video demonstrating the usage of the application**  [https://www.loom.com/share/45a65bc4ec23432cab4254af08a1a0d2]      
 
 
 # Contributing
