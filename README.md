@@ -53,7 +53,7 @@ Remove an employee from the database
 # MUCK UP 
 
 
-**walkthrough video demonstrating the usage of the application**         
+**Walkthrough video demonstrating the usage of the application**         
 
 
 # Contributing
