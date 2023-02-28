@@ -11,7 +11,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Default response for any other request (Not Found)
+
 app.use((req, res) => {
   res.status(404).end();
 });
@@ -87,15 +87,15 @@ function viewAllRoles() {
   const sql = `SELECT * FROM role`;
   db.query(sql, (err, result) => {
       if (err) {
-          res.status(500).json({ error: err.message })
-          return;
-      }
-      console.table(result);
-      startPrompt();
-  });
+    res.status(500).json({ error: err.message })
+return;
+ }
+console.table(result);
+startPrompt();
+});
 };
 
-// View all employees
+// Viewing all employees
 function viewAllEmployees() {
   const sql = `SELECT employee.id,
               employee.first_name,
@@ -131,16 +131,14 @@ function addDepartment() {
   const params = [answer.department_name];
   db.query(sql, params, (err, result) => {
   if (err) throw err;
-  console.log('The new department entered has been added successfully to the database.');
-
-      db.query(`SELECT * FROM department`, (err, result) => {
-          if (err) {
-              res.status(500).json({ error: err.message })
-              return;
-          }
-          console.table(result);
-          startPrompt();
-      });
+ db.query(`SELECT * FROM department`, (err, result) => {
+if (err) {
+res.status(500).json({ error: err.message })
+ return;
+}
+console.table(result);
+startPrompt();
+});
   });
 });
 };
@@ -165,17 +163,16 @@ function addRole() {
       }
   ]).then(function (response) {
       db.query("INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)", [response.title, response.salary, response.department_id], function (err, data) {
-          if (err) throw err;
-          console.log('The new role entered has been added successfully to the database.');
-
-          db.query(`SELECT * FROM role`, (err, result) => {
-              if (err) {
-                  res.status(500).json({ error: err.message })
-                  startPrompt();
-              }
-              console.table(result);
-              startPrompt();
-          });
+     if (err) throw err;
+    console.log('The new role entered has been added successfully to the database.');
+    db.query(`SELECT * FROM role`, (err, result) => {
+    if (err) {
+    res.status(500).json({ error: err.message })
+    startPrompt();
+}
+console.table(result);
+startPrompt();
+});
       })
 });
 };
@@ -207,15 +204,13 @@ function addEmployee() {
   ]).then(function (response) {
       db.query("INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)", [response.first_name, response.last_name, response.role_id, response.manager_id], function (err, data) {
           if (err) throw err;
-          console.log('The new employee entered has been added successfully to the database.');
-
-          db.query(`SELECT * FROM employee`, (err, result) => {
-              if (err) {
-                  res.status(500).json({ error: err.message })
-                  startPrompt();
-              }
-              console.table(result);
-              startPrompt();
+    db.query(`SELECT * FROM employee`, (err, result) => {
+     if (err) {
+    res.status(500).json({ error: err.message })
+     startPrompt();
+}
+console.table(result);
+startPrompt();
           });
       })
 });
@@ -235,20 +230,90 @@ function updateEmployeeRole() {
           message: "Please enter the new role number id associated with the employee you want to update in the database. Enter ONLY numbers."
       }
   ]).then(function (response) {
-      db.query("UPDATE employee SET role_id = ? WHERE first_name = ?", [response.role_id, response.first_name], function (err, data) {
-          if (err) throw err;
-          console.log('The new role entered has been added successfully to the database.');
-
-          db.query(`SELECT * FROM employee`, (err, result) => {
-              if (err) {
-                  res.status(500).json({ error: err.message })
-                  startPrompt();
-              }
-              console.table(result);
-              startPrompt();
-          });
-      })
+    db.query("UPDATE employee SET role_id = ? WHERE first_name = ?", [response.role_id, response.first_name], function (err, data) {
+    if (err) throw err;     
+    db.query(`SELECT * FROM employee`, (err, result) => {
+    if (err) {
+    res.status(500).json({ error: err.message })
+    startPrompt();
+}
+    console.table(result);
+startPrompt();
+});
+})
 });
 };
+
+function deleteDepartment() {
+    
+   inquirer.prompt([
+    {
+        name: "department_id",
+        type: "number",
+        message: "Please enter the id of the department you want to delete from the database. Enter ONLY numbers."
+        }
+    ]).then(function (response) {
+        db.query("DELETE FROM department WHERE id = ?", [response.department_id], function (err, data) {
+        if (err) throw err;
+    db.query(`SELECT * FROM department`, (err, result) => {
+        if (err) {
+        res.status(500).json({ error: err.message })
+    startPrompt();
+    }
+console.table(result);
+startPrompt();
+});
+})
+});
+};
+
+// Delete role
+function deleteRole() {
+    inquirer.prompt([
+        {
+            
+            name: "role_id",
+            type: "number",
+            message: "Please enter the id of the role you want to delete from the database. Enter ONLY numbers."
+        }
+    ]).then(function (response) {
+        db.query("DELETE FROM role WHERE id = ?", [response.role_id], function (err, data) {
+            if (err) throw err;      
+        db.query(`SELECT * FROM role`, (err, result) => {
+                
+        if (err) {
+                    
+        res.status(500).json({ error: err.message })
+        startPrompt();
+}
+console.table(result);
+startPrompt();
+});})
+});
+};
+
+// Delete Employee
+function deleteEmployee() {
+    inquirer.prompt([
+        {
+            name: "employee_id",
+            type: "number",
+            message: "Please enter the id of the employee you want to delete from the database. Enter ONLY numbers."
+        }
+    ]).then(function (response) {
+        db.query("DELETE FROM employee WHERE id = ?", [response.employee_id], function (err, data) {
+            if (err) throw err;
+        db.query(`SELECT * FROM employee`, (err, result) => {
+    if (err) {
+     res.status(500).json({ error: err.message })
+startPrompt();
+}
+console.table(result);
+startPrompt();});
+})
+});
+};
+
+
 
 startPrompt();
