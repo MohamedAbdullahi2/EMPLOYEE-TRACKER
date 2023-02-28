@@ -16,6 +16,8 @@ Express.js
 Inquiery 
 
 Mysql2
+
+console.table
  
  
 # Installation
@@ -68,7 +70,7 @@ Create a new Pull Request
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). 
 
 
 
