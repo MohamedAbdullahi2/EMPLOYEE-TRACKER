@@ -16,6 +16,8 @@ Express.js
 Inquiery 
 
 Mysql2
+
+console.table
  
  
 # Installation
