@@ -116,7 +116,7 @@ function viewAllEmployees() {
   });
 };
 
-// Add departments
+// Adding  departments
 function addDepartment() {
   inquirer.prompt([
       {
@@ -145,7 +145,7 @@ function addDepartment() {
 });
 };
 
-// Add a role
+// Adding  a role
 function addRole() {
   inquirer.prompt([
       {
@@ -180,7 +180,7 @@ function addRole() {
 });
 };
 
-// Add employees
+// Adding employees
 function addEmployee() {
   inquirer.prompt([
       {
@@ -221,7 +221,7 @@ function addEmployee() {
 });
 };
 
-// Update employee role
+// Updating employee role
 function updateEmployeeRole() {
   inquirer.prompt([
       {
